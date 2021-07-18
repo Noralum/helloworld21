@@ -1,12 +1,12 @@
 pipeline {
-   agent any
+   agent any 
    stages {
-     stage('Build') {
-       steps {
-         echo "build step"
-         sleep 10
-       }
-     }
+      stage('Build step'){
+         steps {
+          echo "build step"
+          sleep 10  
+         }
+      }
    }
 
 }
