@@ -8,7 +8,7 @@ pipeline {
     registryCredential = 'docker_userID'
    }
    stages {
-      stage('Build step'){
+      stage('Build'){
          steps {
           sh 'mvn clean'
           sh 'mvn install'
@@ -27,8 +27,6 @@ pipeline {
              docker.build registry + ":$BUILD_NUMBER"
          }
       }
-     
    }
-
 }
    
